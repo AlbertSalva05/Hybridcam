@@ -46,3 +46,5 @@ Then open http://localhost:8000. (Opening `index.html` via `file://` also works,
 - **Add a page:** create the HTML file, add `<div data-partial="header"></div>` / `<div data-partial="footer"></div>`, then add one entry to the nav array in `assets/js/main.js` — header, drawer and footer links all update.
 - **Product photos:** drop images into the `.card__image` slots in `shop.html` / `index.html`.
 - **Listings copy:** lives in `HYBRID.data` in `assets/js/main.js`.
+- **Header menu:** `HYBRID.menu` in `assets/js/main.js` drives the desktop bar — an entry with a `children` array renders as a dropdown. `HYBRID.nav` stays the flat list used by the mobile drawer.
+- **Theme:** light/dark toggle in the header; choice is stored under `hc-theme` in localStorage and falls back to the OS `prefers-color-scheme`. Light-theme colors are the `6.5 · LIGHT THEME` block in `main.css` — override tokens there, not per-component.
