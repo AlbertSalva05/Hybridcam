@@ -1,6 +1,6 @@
 # hybrid.cam — Escrowed camera marketplace
 
-Static multi-page site (HTML + CSS + jQuery). No build step, no dependencies to install.
+Static multi-page site (HTML + CSS + vanilla JS). No build step, no dependencies, no CDN scripts — the only external request is Google Fonts, and the site renders fully without it.
 
 ## Files
 
@@ -16,7 +16,7 @@ render.yaml       Render static-site blueprint
 assets/
   favicon.svg
   css/main.css    All styles (tokens, base, layout, components, pages, motion, responsive)
-  js/main.js      Partials (header/footer/marquee), data, marquee loop, scroll effects, modal
+  js/main.js      Partials (header/footer/marquee), data, marquee loop, scroll effects, modal (no framework)
 ```
 
 ## Deploy on Render
