@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: hybrid-cam
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    routes:
+      - type: rewrite
+        source: /shop
+        destination: /shop.html
+      - type: rewrite
+        source: /protocol
+        destination: /protocol.html
+      - type: rewrite
+        source: /track
+        destination: /track.html
+      - type: rewrite
+        source: /sellers
+        destination: /sellers.html
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=86400
